@@ -1,0 +1,244 @@
+*{
+  box-sizing:border-box;
+}
+@font-face {
+    font-family:"bauhaus93";
+    src:url(../fonts/bauhaus93.ttf) format("truetype")
+}
+@font-face {
+    font-family:"DIN";
+    src:url(../fonts/DIN.otf) format("truetype")
+}
+@keyframes snow {
+ 0% {
+     background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+ 100% {
+     background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5rem;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.clear:after {
+  clear: both;
+}
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+
+#home {
+    background: #828282;
+    background-image: url("../images/snow.png"), url("../images/snow2.png"), url("../images/snow3.png");
+    animation: snow 20s linear infinite;
+}
+#blog {
+    background: #f1f1f1;
+    padding: 60px 0 90px 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'DIN';
+}
+.header-img img{
+    vertical-align: top;
+    margin-top: 10px;
+}
+.header-logo {
+    display: flex;
+}
+.header-text a {
+    text-decoration: none;
+}
+.header-text span {
+    text-shadow: 3px 3px 0px #367492;
+    font-size: 36px;
+    line-height: 70px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Bauhaus93;
+}
+.btn {
+    display: block;
+    transition: 0.5s;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 400;
+    padding: .5rem 1rem;
+}
+.btn-advertisement {
+    background: #79be00!important;
+    border-bottom: 2px solid #64940d;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'DIN';
+}
+.btn-advertisement span {
+    line-height: 0;
+    font-size: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    height: 15px;
+}
+.btn-advertisement:hover {
+    background: #86d200!important;
+}
+.btn-login {
+    background: #3498DB;
+    color: #fff;
+    border-bottom: 2px solid #10659E;
+    transition: 0.3s;
+    font-size: 16px;
+    cursor: pointer;
+    width: 160px;
+}
+.btn-login:hover {
+    color: #fff;
+    background: #5EB4EF!important;
+    transition: 0.3s;
+}
+.btn-link {
+    color: #fff;
+    text-decoration: none;
+}
+header .btn::after, .btn-link::after {
+    display: block;
+    top: 14px;
+    background-color: #fff;
+    position: relative;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    width: 0%;
+    transition: all .3s;
+    margin: 0 auto;
+}
+header .btn:hover:after, .btn-link:hover::after {
+    width: 40%;
+}
+.blog-content-tittle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.blog-article-item-tittle {
+    font-size: 24px;
+    color: #262626;
+    text-align: center;
+    padding: 45px 0 10px 0;
+}
+.blog-content-tittle p {
+    color: #8e8e8e;
+    font-size: 18px;
+}
+h1 {
+    font-size: 30px;
+    margin-bottom: -15px;
+    color: #191919;
+}
+h2 {
+    font-size: 24px;
+    color: #262626; 
+}
+.blog-article-item {
+    background: white;
+    width: 49%;
+        margin-bottom: 20px;
+}
+.blog-article-item-text {
+    color: #828282;
+    padding: 0 30px;
+}
+.blog-article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog-article-item-text-next{
+    margin-bottom: 10px;
+}
+footer {
+    background: #828282;
+    padding: 45px 0;
+    font-family: 'DIN';
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+}
+.footer-info {
+    display: flex;
+    font-size: 14px;
+}
+.footer-menu {
+    display: flex;
+    width: 75%;
+}
+.footer-menu-list {
+    display: block;
+    list-style: none;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+}
+.footer-menu-list-item a:hover {
+    text-decoration: underline;
+}
+.footer-menu-list-item:first-child {
+        margin: 10px 0;
+}
+.footer-menu-list li a {
+    color: white;
+    text-decoration: none;
+}
+.btn-message {
+    border: none;
+    border-bottom: 2px solid #10659e;
+    padding: 10px;
+}
+.contact-form .btn {
+    width: 200px;
+    background: #3498db;
+    border-bottom: 2px solid #10659e;
+    margin-top: 20px;
+}
+.contact-form .btn:hover {
+    color: #fff;
+    background: #5EB4EF!important;
+    transition: 0.3s;
+}
+.agreement {
+    width: 650px;
+}
+.agreement-link {
+    color: white;
+    text-decoration: none;
+}
+.write-us-intro {
+    width: 25%;
+    padding: 0 15px;
+}
+.logo {
+    margin-right: 9px;
+}
+.blog-article-item-img img {
+    max-width: 100%;
+}
